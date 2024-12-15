@@ -1,0 +1,14 @@
+{
+  "Hello": "Hello",
+  "User": "User",
+  "title": "Hello world!",
+  "about": "Go to the about page",
+  "SignIn": "Sign in",
+  "SignOut": "Sign out",
+  "Dashboard": "Dashboard",
+  "Browser": "Browser",
+  "Courses": "Courses",
+  "Analytics": "Analytics",
+  "exit": "Exit",
+  "TeacherMode": "Teacher Mode"
+}
