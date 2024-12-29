@@ -10,5 +10,14 @@
   "Courses": "Courses",
   "Analytics": "Analytics",
   "exit": "Exit",
-  "TeacherMode": "Teacher Mode"
+  "TeacherMode": "Teacher Mode",
+  "createCourse": "create a course",
+  "titleIsRequired": "title is required",
+  "CourseTitle": "Course Title",
+  "CourseName": "Name your course",
+  "CourseNameDesc": "What would you like to name your course ? you can changes any time",
+  "formTitleDesc": "what will you teach in this course ?",
+  "Cancel": "Cancel",
+  "Continue": "Continue",
+  "somethingWrong": "something went wrong."
 }

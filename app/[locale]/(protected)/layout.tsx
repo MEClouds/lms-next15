@@ -1,5 +1,4 @@
 import { AppSidebar } from "@/components/ui/app-sidebar"
-import { SidebarTrigger } from "@/components/ui/sidebar"
 import { ReactNode } from "react"
 
 import { Navbar } from "@/components/navbar"
@@ -26,11 +25,8 @@ const DashboardLayout = async ({ children }: { children: ReactNode }) => {
   return (
     <>
       <AppSidebar />
-      <main className="w-full">
-        <div className="w-full h-12 items-center px-2 flex justify-between">
-          <SidebarTrigger className="md:hidden xs:block" />
-          <Navbar />
-        </div>
+      <main className="w-full mt-12">
+        <Navbar />
         {children}
       </main>
     </>

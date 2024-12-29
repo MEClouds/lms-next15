@@ -4,6 +4,7 @@ import "../globals.css"
 import { SidebarProvider } from "@/components/ui/sidebar"
 import { getLocale, getMessages, setRequestLocale } from "next-intl/server"
 import { NextIntlClientProvider } from "next-intl"
+import { ToastProvider } from "@/components/providers/toast-provider"
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -39,7 +40,10 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          <SidebarProvider>{children}</SidebarProvider>
+          <SidebarProvider>
+            <ToastProvider />
+            {children}
+          </SidebarProvider>
         </NextIntlClientProvider>
       </body>
     </html>

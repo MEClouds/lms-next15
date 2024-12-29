@@ -10,5 +10,14 @@
   "Courses": "الدورات",
   "Analytics": "التحليلات",
   "exit": "خروج",
-  "TeacherMode": "وضع المعلم"
+  "TeacherMode": "وضع المعلم",
+  "createCourse": "إنشاء دورة",
+  "titleIsRequired": "العنوان مطلوب",
+  "CourseTitle": "عنوان الدورة",
+  "CourseName": "قم بتسمية الدورة التدريبية الخاصة بك",
+  "CourseNameDesc": "ماذا تريد أن تسمي الدورة الخاصة بك؟ \nيمكنك التغييرات في أي وقت",
+  "formTitleDesc": "ماذا ستدرس في هذه الدورة؟",
+  "Cancel": "إلغاء",
+  "Continue": "استمرار",
+  "somethingWrong": "حدث خطأ ما."
 }
