@@ -19,5 +19,8 @@
   "formTitleDesc": "what will you teach in this course ?",
   "Cancel": "Cancel",
   "Continue": "Continue",
-  "somethingWrong": "something went wrong."
+  "somethingWrong": "something went wrong.",
+  "CourseSetup": "Course Setup",
+  "fieldsCompleted": "fields completed",
+  "Customize your course": "Customize your course"
 }

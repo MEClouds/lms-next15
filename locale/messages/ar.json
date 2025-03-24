@@ -19,5 +19,8 @@
   "formTitleDesc": "ماذا ستدرس في هذه الدورة؟",
   "Cancel": "إلغاء",
   "Continue": "استمرار",
-  "somethingWrong": "حدث خطأ ما."
+  "somethingWrong": "حدث خطأ ما.",
+  "CourseSetup": "إعداد الدورة",
+  "fieldsCompleted": "الحقول مكتملة",
+  "Customize your course": "تخصيص الدورة التدريبية الخاصة بك"
 }
