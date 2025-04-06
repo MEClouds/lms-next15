@@ -6,6 +6,7 @@ import { BookOpen } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 import { redirect } from "next/navigation"
 import { TitleForm } from "./_components/title-form"
+import { DescriptionForm } from "./_components/description-form"
 
 const CourseIdPage = async ({ params }: { params: { courseid: string } }) => {
   const t = await getTranslations()
@@ -56,6 +57,10 @@ const CourseIdPage = async ({ params }: { params: { courseid: string } }) => {
             <h2>{t("Customize your course")}</h2>
           </div>
           <TitleForm initialData={course} courseId={course.id} />
+          <DescriptionForm
+            initialData={{ description: course.description ?? undefined }}
+            courseId={course.id}
+          />
         </div>
       </div>
     </div>

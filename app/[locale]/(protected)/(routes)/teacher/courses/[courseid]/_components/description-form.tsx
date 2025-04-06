@@ -7,7 +7,6 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
 import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -18,18 +17,23 @@ import { useTranslations } from "next-intl"
 import toast from "react-hot-toast"
 import axios from "axios"
 import { useRouter } from "@/i18n/routing"
+import { cn } from "@/lib/utils"
+import { Textarea } from "@/components/ui/textarea"
 
-interface TitleFormProps {
+interface DescriptionFormProps {
   initialData: {
-    title: string
+    description?: string
   }
   courseId: string
 }
 
-export const TitleForm = ({ initialData, courseId }: TitleFormProps) => {
+export const DescriptionForm = ({
+  initialData,
+  courseId,
+}: DescriptionFormProps) => {
   const t = useTranslations()
   const formSchema = z.object({
-    title: z.string().min(1, { message: t("titleIsRequired") }),
+    description: z.string().min(1, { message: t("titleIsRequired") }),
   })
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -58,31 +62,37 @@ export const TitleForm = ({ initialData, courseId }: TitleFormProps) => {
   return (
     <div className="mt-5 border bg-secondary rounded-md p-3">
       <div className=" font-medium flex items-center justify-between">
-        Course title
+        Course Description
         <Button variant={"ghost"} onClick={toggleEditing}>
           {isEditing && <>Cancel</>}
           {!isEditing && (
             <>
               <Pencil className="h-4 w-4 me-2" />
-              Edit title
+              Edit description
             </>
           )}
         </Button>
       </div>
-      {!isEditing && <div className="mt-2">{initialData.title}</div>}
+      {!isEditing && (
+        <div
+          className={cn("text-sm mt-2", !initialData.description && "italic")}
+        >
+          {initialData.description || "No description"}
+        </div>
+      )}
       {isEditing && (
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className=" gap-y-8">
             <FormField
               control={form.control}
-              name="title"
+              name="description"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input
+                    <Textarea
                       className="bg-primary-foreground"
                       disabled={isSubmitting}
-                      placeholder="Course title"
+                      placeholder="e.g. This course about ..."
                       {...field}
                     />
                   </FormControl>

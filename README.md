@@ -9,3 +9,5 @@
 
 - [Session [01]](/public/documents/en/session-01.md)
 - [Session [02]](/public/documents/en/session-02.md)
+- [Session [03]](/public/documents/en/session-03.md)
+- [Session [04]](/public/documents/en/session-04.md)
